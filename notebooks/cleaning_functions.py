@@ -114,7 +114,6 @@ def trainLogisticModel(df:pd.DataFrame, ColumnToPredict = 'type'):
     
         rus = RandomUnderSampler(random_state=69)
         X_train_under, y_train_under = rus.fit_resample(X_train, y_train)
-        display(pd.concat([X_train_under,y_train_under],axis=1))
 
     # Create LogisticRegression model
     classification = LogisticRegression(random_state=0, solver='lbfgs')
